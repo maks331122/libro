@@ -1,3 +1,8 @@
+@font-face{
+  font-family: athena;
+  src: url(fonts/Kurale-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +11,6 @@
 
 .wrapper {
   width: 100%;
-  height: 1000px;
   background-color: #27272d;
 }
 
@@ -61,18 +65,19 @@
 }
 
 .header__button {
-  font-size: 18px;
+  font-size: 25px;
   color: white;
   background-color: transparent;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: athena;
   font-weight: 400;
   border: none;
   text-align: center;
+  transition: .5s ease;
 }
 
 .header__button:hover {
   cursor: pointer;
+  color: #FFCF77;
 }
 
 .header__user {
@@ -85,3 +90,4 @@
 .header__user:hover {
   cursor: pointer;
 }
+

@@ -19,7 +19,7 @@ class Header extends React.Component {
             <button className="header__button">Новинки</button>
             <button className="header__button">Популярне</button>
             <button className="header__button">Категорії</button>
-            <button className="header__button">Проект</button>
+            <button className="header__button">Про нас</button>
             <img className="header__user" src={user} alt="user" />
           </div>
         </div>

@@ -1,0 +1,54 @@
+@font-face{
+  font-family: athena;
+  src: url(fonts/Kurale-Regular.ttf);
+}
+
+
+.titleText {
+  align-self: flex-start;
+  margin: 100px 0 10px 75px;
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  font-family: athena;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 90%;
+  height: 300px;
+  overflow-x: auto;
+}
+
+.container::-webkit-scrollbar{
+  height: 10px;
+  background-color: #27272d;
+}
+
+.container::-webkit-scrollbar-thumb{
+  height: 8px;
+  background-color: #FFCF77;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover{
+  background-color: #fcbf4f;
+}
+
+.card{
+  width: auto;
+  height: 95%;
+}
+
+.card__image{
+  object-fit: contain;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.card__image:hover {
+  cursor: pointer;
+}
+
