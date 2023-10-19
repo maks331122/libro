@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import {Slider} from "./Slider.tsx";
 import HorisontalScrool from "./HorisontalScrool";
+import Fotter from "./Fotter";
 import sliderbook1 from "../images/dorian gray.png";
 import sliderbook2 from "../images/Charlie.png";
 import sliderbook3 from "../images/Tygrolovy.png";
@@ -13,6 +14,9 @@ import book5 from "../images/gavan.png"
 import book6 from "../images/znyknennya.png"
 import book7 from "../images/Institute.png"
 import book8 from "../images/gra.png"
+import book9 from "../images/Charlieimg.png"
+import book10 from "../images/dorian gray img.png"
+import book11 from "../images/Tygrolovyimg.png"
 
 const books = [
   {
@@ -29,7 +33,7 @@ const books = [
   },
   {
     genre: 'Роман',
-    titles: [[book8, "ok8"], [sliderbook1, "https://fs02.vseosvita.ua/0200ezje-dd4f/001-0x0.jpg"], [sliderbook2, "ok"], [sliderbook3, "ok"]]
+    titles: [[book8, "ok8"], [book10, "https://fs02.vseosvita.ua/0200ezje-dd4f/001-0x0.jpg"], [book9, "ok"], [book11, "ok"]]
   }
 ];
 
@@ -53,6 +57,7 @@ class Newest extends React.Component {
         <HorisontalScrool scroolImages={books[1].titles} typeName="Наукова фантастика"/>
         <HorisontalScrool scroolImages={books[2].titles} typeName="Детектив"/>
         <HorisontalScrool scroolImages={books[3].titles} typeName="Роман"/>
+        <Fotter/>
       </div>
     )
   }
