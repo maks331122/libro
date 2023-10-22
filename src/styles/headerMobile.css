@@ -1,5 +1,10 @@
+@font-face{
+  font-family: athena;
+  src: url(fonts/Kurale-Regular.ttf);
+}
+
 .header__mobile {
-  height: 50px;
+  height: 60px;
   width: 100vw;
   background-color: #27272d;
   display: flex;
@@ -11,12 +16,12 @@
 .mobile__logo > img {
   margin: 5px 0 0 0;
   width: fit-content;
-  height: 40px;
+  height: 50px;
   object-fit: cover;
 }
 
 .mobile__search > input {
-  height: 20px;
+  height: 30px;
   width: 80%;
   border: none;
   background-color: rgb(73, 71, 71);
@@ -24,36 +29,75 @@
   border-radius: 6px;
   padding: 0 0 0 5px;
 }
-
-.mobile__icon {
-  height: 20px;
-  width: 20px;
-  margin: 0 20px 0 0;
+.burger__menu {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  cursor: pointer;
+  margin-right: 20px;
+  z-index: 2;
   cursor: pointer;
 }
-.mobile__icon::before {
-  content: "";
-  position: absolute;
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #FFCF77;
+  transition: 0.4s;
+}
+
+.burger__menu.active .bar:nth-child(2) {
+  width: 0;
+}
+
+.burger__menu.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.burger__menu.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+
+
+.menu__items{
+  position: fixed;
+  left: -250%;
   top: 0;
-  width: 20px;
-  background-color: #FFCF77;
-  height: 2px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #27272d;
+  transition: .5s ease;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.mobile__icon span{
-  position: absolute;
-  top: 9px;
-  width: 20px;
-  background-color: #FFCF77;
-  height: 2px;
+.menu__items ul {
+  height: 100%;
+  width: 80%;
 }
 
-.mobile__icon::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 20px;
-  background-color: #FFCF77;
-  height: 2px;
+.menu__items li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top:1px solid#FFCF77;
+  border-bottom:1px solid#FFCF77;
+  height: 10%;
+}
+.menu__items li a{
+  text-decoration: none;
+  color: white;
+  font-family: athena;
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.burger__menu.active .menu__items{
+  left: 0;
 }
