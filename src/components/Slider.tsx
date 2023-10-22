@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "../styles/slider.css";
 
 type ImgSliderProps = {
@@ -47,10 +47,10 @@ export function Slider({ sliderImages }: ImgSliderProps) {
       </div>
       <div className="arrows">
         <button className="arrow" onClick={showPrevImage} style={{ left: 0 }}>
-          <ArrowBigLeft />
+          <ChevronLeft />
         </button>
         <button className="arrow" onClick={showNextImage} style={{ right: 0 }}>
-          <ArrowBigRight />
+          <ChevronRight />
         </button>
       </div>
     </div>

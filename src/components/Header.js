@@ -1,31 +1,20 @@
 import React from "react";
-import logo from "../images/logo-2.png";
-import user from "../images/user.png";
+import { useMediaQuery } from "react-responsive";
+import { HeaderDesktop } from "./HeaderDesktop";
+import { HeaderMobile } from "./HeaderMobile";
 
-class Header extends React.Component {
-  render() {
-    return (
-      <header className="header">
-        <div className="header__leftside">
-          <img className="header__logo" src={logo} alt="logo" />
-          <input
-            className="header__search"
-            placeholder="Search Libro"
-            type="text"
-          />
-        </div>
-        <div className="header__rightside">
-          <div className="header__nav">
-            <button className="header__button">Новинки</button>
-            <button className="header__button">Популярне</button>
-            <button className="header__button">Категорії</button>
-            <button className="header__button">Про нас</button>
-            <img className="header__user" src={user} alt="user" />
-          </div>
-        </div>
-      </header>
-    );
-  }
-}
+
+const Header = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 772px)" });
+  return (
+    <div>
+      {isMobile ? (
+        <HeaderMobile/>
+      ) : (
+        <HeaderDesktop/>
+      )}
+    </div>
+  );
+};
 
 export default Header;

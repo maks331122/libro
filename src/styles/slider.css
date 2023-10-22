@@ -40,8 +40,7 @@
 }
 
 .arrow > * {
-  stroke: white;
-  fill: black;
+  stroke: #FFCF77;
   width: 2rem;
   height: 2rem;
 }

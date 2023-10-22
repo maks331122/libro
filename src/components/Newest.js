@@ -57,7 +57,7 @@ class Newest extends React.Component {
         <HorisontalScrool scroolImages={books[1].titles} typeName="Наукова фантастика"/>
         <HorisontalScrool scroolImages={books[2].titles} typeName="Детектив"/>
         <HorisontalScrool scroolImages={books[3].titles} typeName="Роман"/>
-        <Fotter/>
+        {/* <Fotter/> */}
       </div>
     )
   }
