@@ -38,7 +38,6 @@ export function Slider({ sliderImages }: ImgSliderProps) {
           <img
             key={imgUrl}
             src={imgUrl}
-            loading="lazy"
             onClick={() => window.open(url, '_blank')}
             alt="sliderImage"
             className="slider__image"
