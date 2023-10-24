@@ -26,7 +26,7 @@ export const HeaderMobile = () => {
         <div style={{backgroundColor: 'rgb(0,0,0,0)', position:'absolute', width: "30px", height: "30px"}} onClick={() => setActive(!active)}></div>
 
         <div className={`menu__items ${active ? "active" : ""}`}>
-          <div className="mobile__logo">
+          <div className="mobileMenu__logo">
             <img style={{height: "90px"}} src={logo} alt="ok"/>
           </div>
           <ul style={{alignSelf: "center"}}>
@@ -46,7 +46,7 @@ export const HeaderMobile = () => {
               <a href="#">Про нас</a>
             </li>
           </ul>
-          <h2 style={{alignSelf: "center", color: "white", marginBottom: "20px"}} className="menu__info">&copy; 2023 Libro</h2>
+          <h2 style={{alignSelf: "center", color: "white", marginBottom: "80px"}} className="menu__info">&copy; 2023 Libro</h2>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import { HeaderMobile } from "./HeaderMobile";
 
 
 const Header = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 772px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <div>
       {isMobile ? (

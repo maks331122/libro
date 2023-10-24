@@ -10,7 +10,7 @@ class HorisontalScrool extends React.Component {
       <div className="container">
         {this.props.scroolImages.map(([imgUrl, url]) => (
           <div className="card" key={imgUrl}>
-            <img className="card__image" onClick={() =>{window.open(url)}} src={imgUrl} alt="ok"/>
+            <img className="card__image" style={{loading: "lazy"}} onClick={() =>{window.open(url)}} src={imgUrl} alt="ok"/>
           </div>
         ))}
       </div>
