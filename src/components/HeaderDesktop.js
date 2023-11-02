@@ -1,27 +1,25 @@
 import React from "react";
 import logo from "../images/logo-2.png";
-import user from "../images/user.png";
 
 export const HeaderDesktop = () => {
-  return(
+  return (
     <header className="header">
       <div className="header__leftside">
         <img className="header__logo" src={logo} alt="logo" />
-        <input
-          className="header__search"
-          placeholder="Search Libro"
-          type="text"
-        />
       </div>
+      <input
+        className="header__search"
+        placeholder="Search Libro"
+        type="text"
+      />
       <div className="header__rightside">
         <div className="header__nav">
-          <button className="header__button">Новинки</button>
-          <button className="header__button">Популярне</button>
-          <button className="header__button">Категорії</button>
+          <button onClick={() => window.location.href = `/`} className="header__button">
+            Новинки
+          </button>
           <button className="header__button">Про нас</button>
-          <img className="header__user" src={user} alt="user" />
         </div>
       </div>
     </header>
-  )
-}
+  );
+};

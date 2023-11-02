@@ -1,0 +1,104 @@
+@font-face{
+  font-family: athena;
+  src: url(fonts/Kurale-Regular.ttf);
+}
+
+
+.main{
+  width: 100%;
+  background-color: #27272d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+
+.main__leftside{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1F2123;
+}
+
+.main__rightside{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1F2123;
+}
+.main__title{
+  color: white;
+  font-family: athena;
+  align-self: flex-start;
+  transition: .4s ease;
+}
+.main__subTitle{
+  color: #ccc;
+  font-family: athena;
+  font-weight: 200;
+  align-self: flex-start;
+}
+
+.main__image{
+  width: 90%;
+  margin:20px 0;
+}
+
+.main__info{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.main__info p {
+  color: white;
+  font-size: 20px;
+  font-family: athena;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.main__info p:nth-child(odd){
+  background-color: #111111;
+}
+
+@media (max-width: 900px){
+  .main{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__leftside{
+    width: 80%;
+  }
+  .main__rightside{
+    width: 80%;
+  }
+}
+
+@media (max-width: 460px){
+  .main__title{
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 377px){
+  .main__title{
+    font-size: 22px;
+  }
+}
+@media (max-width: 322px){
+  .main__title{
+    font-size: 18px;
+  }
+}

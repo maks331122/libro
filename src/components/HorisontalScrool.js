@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/scrool.css";
 
 function HorisontalScrool(props) {
@@ -18,7 +18,7 @@ function HorisontalScrool(props) {
             <img
               className="card__image"
               onClick={() => {
-                window.open(url);
+                window.location.href = `/book/${url}`;
               }}
               src={imgUrl}
               alt="ok"

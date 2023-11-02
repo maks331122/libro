@@ -17,7 +17,7 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 70px;
@@ -27,8 +27,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
-  margin-left: 20px;
 }
 
 .header__logo {
@@ -78,18 +76,6 @@
 .header__button:hover {
   cursor: pointer;
   color: #FFCF77;
-}
-
-.header__user {
-  object-fit: cover;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.header__user:hover {
-  cursor: pointer;
 }
 
 @media (max-width: 1000px){

@@ -31,16 +31,7 @@ export const HeaderMobile = () => {
           </div>
           <ul style={{alignSelf: "center"}}>
             <li>
-              <a href="#">Новинки</a>
-            </li>
-            <li>
-              <a href="#">Популярне</a>
-            </li>
-            <li>
-              <a href="#">Категорії</a>
-            </li>
-            <li>
-              <a href="#">Обліковий запис</a>
+              <a href="/">Новинки</a>
             </li>
             <li>
               <a href="#">Про нас</a>

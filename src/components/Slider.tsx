@@ -38,7 +38,7 @@ export function Slider({ sliderImages }: ImgSliderProps) {
           <img
             key={imgUrl}
             src={imgUrl}
-            onClick={() => window.open(url, '_blank')}
+            onClick={() => window.location.href = `/book/${url}`}
             alt="sliderImage"
             className="slider__image"
             style={{ translate: `${-100 * imgIndex}%` }}
