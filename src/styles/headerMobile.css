@@ -18,6 +18,11 @@
   width: 100px;
   object-fit: cover;
 }
+
+.mobile__logo > img:hover{
+  cursor: pointer;
+}
+
 .mobileMenu__logo > img {
   margin: 5px 0 0 0;
   width: 220px;
@@ -33,6 +38,47 @@
   border-radius: 6px;
   padding: 0 0 0 5px;
 }
+
+.mobile__search{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.searcherMobile{
+  position: absolute;
+  left: 6px;
+  top: 31px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+.searcherMobile li {
+  background-color: #515151;
+  height: 35px;
+  width: 123px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkMobile{
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-family: athena;
+  transition: .4s ease;
+}
+
+.linkMobile:hover{
+  color: #FFCF77;
+  cursor: pointer;
+}
+
 .burger__menu {
   position: relative;
   display: flex;

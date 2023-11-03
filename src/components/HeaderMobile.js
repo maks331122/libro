@@ -1,9 +1,34 @@
 import React, { useState, useEffect } from "react";
 import "../styles/headerMobile.css";
+import { Link } from "react-router-dom";
 import logo from "../images/logo-2.png";
+import Axios from 'axios';
 
 export const HeaderMobile = () => {
   const [active, setActive] = useState(false);
+
+  const [bookData, setBookData] = useState(null);
+  const [error, setError] = useState(null);
+
+  async function Search(event) {
+    const query = encodeURIComponent(event.target.value);
+    console.log(query);
+
+    try {
+      if (query.length !== 0) {
+        const response = await Axios.get(`http://localhost:8080/search/${query}`);
+        console.log(response.data[0].book_name);
+        setBookData(response.data);
+        setError(null);
+      } else {
+        setBookData(null);
+      }
+    } catch (error) {
+      console.error('Помилка запиту:', error);
+      setBookData([]);
+      setError('Помилка запиту. Будь ласка, спробуйте ще раз.');
+    }
+  }
 
   useEffect(() => {
     document.body.style.overflow = active ? "hidden" : "auto";
@@ -12,11 +37,27 @@ export const HeaderMobile = () => {
   return (
     <div className="header__mobile">
       <div className="mobile__logo">
-        <img src={logo} alt="ok" />
+        <img src={logo} onClick={() => window.location.href = `/`} alt="ok" />
       </div>
       <div className="mobile__search">
-        <input placeholder="Search Libro" type="text" />
-      </div>
+        <input
+          placeholder="Search Libro"
+          type="text"
+          onChange={Search}
+        />
+        {error && <p>{error}</p>}
+        {bookData && bookData.length > 0 ? bookData !== 'nope' ? (
+          <ul className="searcherMobile">
+            {bookData.map((book) => (
+              <li key={book.id}>
+                <Link className="linkMobile" to={`/book/${book.id}`}>{book.book_name}</Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <></>
+        ) : (<></>)}
+      </div >
       <div
         className={`burger__menu ${active ? "active" : ""}`}        
       >

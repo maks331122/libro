@@ -13,7 +13,6 @@ import book2 from "../images/451 degrees.png";
 import book3 from "../images/daVinci.png";
 import book4 from "../images/duna.png";
 import book5 from "../images/gavan.png";
-import book6 from "../images/znyknennya.png";
 import book7 from "../images/Institute.png";
 import book8 from "../images/gra.png";
 import book9 from "../images/Charlieimg.png";
@@ -23,31 +22,30 @@ import book11 from "../images/Tygrolovyimg.png";
 const books = [
   {
     genre: "Фентезі",
-    titles: [[book1, "ok1"]],
+    titles: [[book1, "1009"]],
   },
   {
     genre: "Наукова фантастика",
     titles: [
-      [book2, "ok2"],
-      [book4, "ok4"],
-      [book7, "ok7"],
+      [book2, "1008"],
+      [book4, "1007"],
+      [book7, "1006"],
     ],
   },
   {
     genre: "Детектив",
     titles: [
-      [book3, "ok3"],
-      [book5, "ok5"],
-      [book6, "ok6"],
+      [book3, "1005"],
+      [book5, "1004"]
     ],
   },
   {
     genre: "Роман",
     titles: [
-      [book8, "ok8"],
+      [book8, "1003"],
       [book10, "1000"],
-      [book9, "ok"],
-      [book11, "ok"],
+      [book9, "1001"],
+      [book11, "1002"],
     ],
   },
 ];

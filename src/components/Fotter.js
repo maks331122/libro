@@ -11,7 +11,7 @@ const Fotter = () => {
   return (
     <div className="fotter">
       <div className="fotter__logo">
-        <img className="logo__img" src={logo} alt="logo" />
+        <img className="logo__img" onClick={() => window.location.href = `/`} src={logo} alt="logo" />
       </div>
       <div className="line"></div>
       <div className="fotter__icons">

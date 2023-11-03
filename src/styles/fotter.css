@@ -12,6 +12,8 @@
   align-items: center;
 }
 
+
+
 .fotter__logo {
   display: flex;
   flex-direction: row;
@@ -23,6 +25,10 @@
   width: clamp(100px, 13vw, 200px);
   object-fit: cover;
   transition: 0.5s ease;
+}
+
+.logo__img:hover{
+  cursor: pointer;
 }
 
 .logo__text{
